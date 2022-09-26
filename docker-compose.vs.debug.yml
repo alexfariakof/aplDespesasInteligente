@@ -1,0 +1,7 @@
+services:
+  backend:
+    labels:
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/backend/debug"
+  frontend:
+    labels:
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/frontend/debug"

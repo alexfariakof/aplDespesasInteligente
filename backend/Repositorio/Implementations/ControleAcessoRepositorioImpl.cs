@@ -31,9 +31,9 @@ namespace backend.Repositorio.Implementations
                         Usuario usuario = new Usuario
                         {
                             Nome = controleAcessoVO.Nome,
-                            sobreNome = controleAcessoVO.SobreNome,
+                            SobreNome = controleAcessoVO.SobreNome,
                             Email = controleAcessoVO.Email,
-                            telefone = controleAcessoVO.Telefone
+                            Telefone = controleAcessoVO.Telefone
                         };
                         dsUsuario.Add(usuario);
 
@@ -108,9 +108,9 @@ namespace backend.Repositorio.Implementations
             MailMessage mail = new MailMessage();
             mail.Sender = new System.Net.Mail.MailAddress("appdespesaspessoais@gmail.com", "App Despesas Pessoais");
             mail.From = new MailAddress("appdespesaspessoais@gmail.com", "App Despesas Pessoais");
-            mail.To.Add(new MailAddress(usuario.Email, usuario.Nome + " " + usuario.sobreNome));
+            mail.To.Add(new MailAddress(usuario.Email, usuario.Nome + " " + usuario.SobreNome));
             mail.Subject = "Contato";
-            mail.Body = " Mensagem do site:<br/> Prezado(a)   " + usuario.Nome + " " + usuario.sobreNome + "<br/>Segue dados para acesso a conta cadastrada.<br><b>E-mail:</b> " + usuario.Email + " <br/> " + message;
+            mail.Body = " Mensagem do site:<br/> Prezado(a)   " + usuario.Nome + " " + usuario.SobreNome + "<br/>Segue dados para acesso a conta cadastrada.<br><b>E-mail:</b> " + usuario.Email + " <br/> " + message;
             mail.IsBodyHtml = true;
             mail.Priority = MailPriority.High;
             try

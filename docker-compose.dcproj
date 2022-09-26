@@ -9,6 +9,7 @@
     <DockerServiceName>dockerfromzerotomastery</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="docker-compose.vs.debug.yml" />
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>

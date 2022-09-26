@@ -6,17 +6,23 @@ using backend.Repositorio.Generic;
 using backend.Repositorio.Implementations;
 using backend.Repositorio;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
+string connection = builder.Configuration["SqlServerConnection:SqlServerConnectionString"];
+
+if (builder.Environment.IsDevelopment())
+{
+    MigrateDatabase(connection);
+}
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string connection = builder.Configuration["SqlServerConnection:SqlServerConnectionString"];
 builder.Services.AddDbContext<SqlServerContext>(options => options.UseSqlServer(connection));
 
 // Injeção de Dependencia 
@@ -54,3 +60,23 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+void MigrateDatabase(string connection)
+{
+    try 
+    {
+        var evolveConnection = new Microsoft.Data.SqlClient.SqlConnection(connection);
+        var evolve = new Evolve.Evolve(evolveConnection, msg => Log.Information(msg))
+        {
+            Locations = new List<string> { "db/migrations", "db/dataset" },
+            IsEraseDisabled = true,
+        };
+        evolve.Migrate();
+    }
+    catch (Exception ex)
+    {
+        Log.Error("Databse migration failed", ex);
+        throw;
+    }
+}
+
