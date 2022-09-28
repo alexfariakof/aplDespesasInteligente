@@ -1,20 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="apiDespesasPessoais.Program" Collapsed="true">
-    <Position X="21.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="apiDespesasPessoais.Startup" Collapsed="true">
-    <Position X="21.25" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
-      <FileName>Startup.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="apiDespesasPessoais.Business.Generic.GenericBusiness&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="backend.Business.Generic.GenericBusiness&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="16" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAQAEBAEAAAAAAAAAAAAA=</HashCode>
@@ -22,15 +8,15 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Business.Implementations.CategoriaBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="0.5" Width="1.75" />
+  <Class Name="backend.Business.Implementations.CategoriaBusinessImpl" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAQAEBAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Business\Implementations\CategoriaBusinessImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Business.Implementations.ControleAcessoBusinessImpl" BaseTypeListCollapsed="true">
+  <Class Name="backend.Business.Implementations.ControleAcessoBusinessImpl" BaseTypeListCollapsed="true">
     <Position X="3.5" Y="7.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>EAAAAAEACAAAAAAAAAAAAAAAQAEAAOAAACAAAAAAAAA=</HashCode>
@@ -38,7 +24,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Business.Implementations.DespesaBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="backend.Business.Implementations.DespesaBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="17.75" Y="1.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAQAEBAEAAAAAAAAAAAAA=</HashCode>
@@ -46,7 +32,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Business.Implementations.FileBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="backend.Business.Implementations.FileBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="21.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -54,42 +40,32 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Business.Implementations.UsuarioBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="backend.Business.Implementations.UsuarioBusinessImpl" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="16" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAAAEBAEAAAAAAIAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAQAEBAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Business\Implementations\UsuarioBusinessImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Controllers.CategoriaController" Collapsed="true">
+  <Class Name="backend.Controllers.CategoriaController" Collapsed="true">
     <Position X="16" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAACAAAAAAAAAg=</HashCode>
       <FileName>Controllers\CategoriaController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Controllers.ControleAcessoController">
+  <Class Name="backend.Controllers.ControleAcessoController">
     <Position X="1.75" Y="4.25" Width="3.75" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Class Name="apiDespesasPessoais.Controllers.ControleAcessoController.TempObject" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Controllers\ControleAcessoController.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAAAAAACAAAAIAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAIAAAAAAAAA=</HashCode>
       <FileName>Controllers\ControleAcessoController.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="IControleAcessoBusiness" />
-    </ShowAsAssociation>
   </Class>
-  <Class Name="apiDespesasPessoais.Controllers.DespesaController">
+  <Class Name="backend.Controllers.DespesaController">
     <Position X="12.5" Y="7.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAABAAAAAAg=</HashCode>
@@ -97,55 +73,55 @@
     </TypeIdentifier>
   </Class>
   <Class Name="apiDespesasPessoais.Controllers.FileController" Collapsed="true">
-    <Position X="14.25" Y="2.5" Width="1.5" />
+    <Position X="14.5" Y="3.75" Width="3" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAACAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\FileController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Controllers.UsuarioController" Collapsed="true">
+  <Class Name="backend.Controllers.UsuarioController" Collapsed="true">
     <Position X="17.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAEAAg=</HashCode>
       <FileName>Controllers\UsuarioController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Model.Base.BaseEntity">
+  <Class Name="backend.Model.Base.BaseEntity">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Base\BaseEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Model.Context.SqlServerContext" Collapsed="true">
+  <Class Name="backend.Model.Context.SqlServerContext" Collapsed="true">
     <Position X="19.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAIAAAAAgAAAAAAAAAAAAAAgAAQIEAAAAAAA=</HashCode>
       <FileName>Model\Context\SqlServerContext.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Model.Categoria">
+  <Class Name="backend.Model.Categoria">
     <Position X="9.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Categoria.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Model.ControleAcesso" Collapsed="true">
+  <Class Name="backend.Model.ControleAcesso" Collapsed="true">
     <Position X="0.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Model\ControleAcesso.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Model.Despesa">
+  <Class Name="backend.Model.Despesa">
     <Position X="11" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAABAAAAAAQAAAAEAAAAABAAAAAAQAAAAAA=</HashCode>
       <FileName>Model\Despesa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Model.Receita">
+  <Class Name="backend.Model.Receita">
     <Position X="12.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAABAAAAAAQAAAAEAAAAAAAAAAAQAAAAAAA=</HashCode>
@@ -153,13 +129,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="apiDespesasPessoais.Model.Usuario">
-    <Position X="3.5" Y="2" Width="1.5" />
+    <Position X="3" Y="2" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAIAAAAAgAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Model\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Repositorio.Generic.GenericRepositorio&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="backend.Repositorio.Generic.GenericRepositorio&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="17.75" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAABAAAAAAQAAAAAAEBAEAAAAAAAAEAAAI=</HashCode>
@@ -167,7 +143,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Repositorio.Implementations.ControleAcessoRepositorioImpl" BaseTypeListCollapsed="true">
+  <Class Name="backend.Repositorio.Implementations.ControleAcessoRepositorioImpl" BaseTypeListCollapsed="true">
     <Position X="4.25" Y="11.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAEAAAAAAAAMCAAAAAAAAAAAA=</HashCode>
@@ -175,42 +151,42 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="apiDespesasPessoais.Security.Configuration.SigningConfigurations">
+  <Class Name="backend.Security.Configuration.SigningConfigurations">
     <Position X="7" Y="5.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Security\Configuration\SigningConfigurations.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="apiDespesasPessoais.Security.Configuration.TokenConfiguration" Collapsed="true">
+  <Class Name="backend.Security.Configuration.TokenConfiguration" Collapsed="true">
     <Position X="6" Y="7.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Security\Configuration\TokenConfiguration.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="apiDespesasPessoais.Business.IControleAcessoBusiness">
+  <Interface Name="backend.Business.IControleAcessoBusiness">
     <Position X="0.75" Y="7.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAACAAAAAAAAA=</HashCode>
       <FileName>Business\IControleAcessoBusiness.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="apiDespesasPessoais.Business.IFileBusiness" Collapsed="true">
+  <Interface Name="backend.Business.IFileBusiness" Collapsed="true">
     <Position X="19.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Business\IFileBusiness.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="apiDespesasPessoais.Business.Generic.IBusiness&lt;T&gt;" Collapsed="true">
+  <Interface Name="backend.Business.Generic.IBusiness&lt;T&gt;" Collapsed="true">
     <Position X="14.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAAAEBAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Business\Generic\IBusiness.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="apiDespesasPessoais.Repositorio.Generic.IRepositorio&lt;T&gt;" Collapsed="true">
+  <Interface Name="backend.Repositorio.Generic.IRepositorio&lt;T&gt;" Collapsed="true">
     <Position X="21.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAAAEBAEAAAAAAAAEAAAA=</HashCode>

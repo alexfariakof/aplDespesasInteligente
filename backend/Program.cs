@@ -51,8 +51,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -69,7 +67,7 @@ void MigrateDatabase(string connection)
         var evolve = new Evolve.Evolve(evolveConnection, msg => Log.Information(msg))
         {
             Locations = new List<string> { "db/migrations", "db/dataset" },
-            IsEraseDisabled = true,
+            IsEraseDisabled = true,            
         };
         evolve.Migrate();
     }
@@ -79,4 +77,3 @@ void MigrateDatabase(string connection)
         throw;
     }
 }
-
