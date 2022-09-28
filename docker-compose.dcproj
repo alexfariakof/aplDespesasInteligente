@@ -6,10 +6,8 @@
     <ProjectGuid>f9e2419a-feb7-4b3a-aa81-978336192bcd</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>dockerfromzerotomastery</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="docker-compose.vs.debug.yml" />
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>

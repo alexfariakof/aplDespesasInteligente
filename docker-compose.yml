@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.4'
 services:
   db:
     image: mcr.microsoft.com/mssql/server:2019-latest
@@ -16,25 +16,26 @@ services:
       - despesas-network
 
   backend:
-    image: mcr.microsoft.com/dotnet/aspnet:6.0
+    image: mcr.microsoft.com/dotnet/aspnet:6.0-focal
     build: 
       context: .
-      dockerfile: backend/Dockerfile
+      dockerfile: ./backend/Dockerfile
     environment:
       TZ: America/Sao_Paulo
-      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_ENVIRONMENT: Development
     ports:
-      - "8080:8080"      
+      - "5001:5001"      
+      - "5202:5202"
     depends_on:
       - db
     networks:
       - despesas-network
 
-  inteligentprivatefinance:  
+  frontend:  
     image: node:lts-alpine
     build:
       context: .
-      dockerfile: frontend/Dockerfile
+      dockerfile: ./frontend/Dockerfile
     environment:
       TZ: America/Sao_Paulo
       NODE_ENV: Production
