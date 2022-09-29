@@ -1,0 +1,8 @@
+
+
+uso de responsividade o que traz flexibilidade no controle do tamanho da telas
+sejam elas um smartphone, tablet ou um pagina web
+assim conseguimos formatar e controlar o funcionamento dos elementos de forma dinamica
+xs, sm, md, lg, xl
+
+Hooks: useMediaQuery
