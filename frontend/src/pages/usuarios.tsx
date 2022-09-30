@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, Button, Paper, TextField  } from '@mui/material';
-import { LayoutMasterPage } from '../../shared/layouts';
+import { LayoutMasterPage } from '../shared/layouts';
 import SaveIcon from '@mui/icons-material/Save';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -63,7 +63,7 @@ export const Usuarios = () => {
 
 
     return (
-        <LayoutMasterPage titulo='Primeiro Acesso' >
+        <LayoutMasterPage titulo='Primeiro Acesso'  >
             <Box
                 gap={1}                
                 margin={2}

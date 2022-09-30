@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import { Button } from '@mui/material';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDrawerContext } from '../shared/contexts';
-import { Dashboard } from '../pages';
-import { Despesas } from '../pages/despesas/Despesas';
-import { Lancamentos } from '../pages/lancamentos/Lancamentos';
-import { Usuarios } from '../pages/usuarios/usuarios';
+import { Dashboard } from '../pages/Dashboard';
+import { Despesas } from '../pages/Despesas';
+import { Lancamentos } from '../pages/Lancamentos';
+import { Usuarios } from '../pages/usuarios';
 
 export const AppRoutes = () => {
     const { toggleDrawerOpen, setDrawerOptions } = useDrawerContext();

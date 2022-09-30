@@ -1,9 +1,8 @@
-import { Box, Button, Paper, TextField, useTheme } from '@mui/material';
-import { LayoutMasterPage } from '../../shared/layouts';
+import { Box, Button, Paper, TextField } from '@mui/material';
+import { LayoutMasterPage } from '../shared/layouts';
 import AddCircleIcon from '@mui/icons-material/AddCircle'
 
 export const Lancamentos = () => {
-    const theme = useTheme();
 
     return (
         <LayoutMasterPage titulo='Lançamentos como Parametro' >

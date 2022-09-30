@@ -1,4 +1,4 @@
-import { LayoutMasterPage } from '../../shared/layouts';
+import { LayoutMasterPage } from '../shared/layouts';
 
 export const Dashboard = () => {
     return (

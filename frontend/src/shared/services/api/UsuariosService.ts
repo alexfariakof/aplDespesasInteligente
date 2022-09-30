@@ -1,4 +1,4 @@
-import { Api } from "../../axios-config";
+import { Api } from "../axios-config";
 
 const getAll = async (): Promise<any> => {
     try {
@@ -7,10 +7,10 @@ const getAll = async (): Promise<any> => {
             return { data };
         }
         
-        return Error('Erro ao listarc usuarios.');
+        return Error('Erro ao listarc usuários.');
     } catch (error) {
         console.log(error);
-        return Error((error as {message: string}).message || 'Erro ao listarc usuarios.');
+        return Error((error as {message: string}).message || 'Erro ao listar usuários.');
     }
 };
 
