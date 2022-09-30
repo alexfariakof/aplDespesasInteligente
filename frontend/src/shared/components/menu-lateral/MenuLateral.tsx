@@ -4,15 +4,18 @@ import { Box } from '@mui/system';
 import HomeIcon from '@mui/icons-material/Home';
 import StarIcon from '@mui/icons-material/Star';
 import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ViewListIcon from '@mui/icons-material/ViewList';
+import ListAltIcon from '@mui/icons-material/ListAlt';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDrawerContext } from '../../contexts';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 
 interface IListItemLinkProps {
-    to: string;
-    icon: string;
-    label: String;
+    to: string,
+    icon: string,
+    label: String,
     onClick: (() => void) | undefined;
 }
 
@@ -37,9 +40,13 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
                         case "home": return <HomeIcon />;
                         case "star": return <StarIcon />;
                         case "settings": return <SettingsIcon />;
+                        case "logout" : return <LogoutIcon />;
+                        case "viewlist" : return <ViewListIcon />;
+                        case "listalt" : return <ListAltIcon />;
+                        
                         default: return undefined;
                     }
-                })()};
+                })()}
             </ListItemIcon>
             <ListItemText primary={label} />
         </ListItemButton>
@@ -64,18 +71,6 @@ export const MenuLateral: React.FC<React.PropsWithChildren> = ({ children }) => 
                     <Divider />
                     <Box flex={1}>
                         <List component="nav" >
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <HomeIcon  >home</HomeIcon>
-                                </ListItemIcon>
-                                <ListItemText primary="Home" />
-                            </ListItemButton>
-                            <ListItemLink
-                                icon='home'
-                                to='pagina-inicial'
-                                label='Home'
-                                onClick={smDown ? toggleDrawerOpen : undefined}
-                            />
                             {drawerOptions.map(drawerOptions => (
                                 <ListItemLink
                                     to={drawerOptions.path}                                    
@@ -94,7 +89,7 @@ export const MenuLateral: React.FC<React.PropsWithChildren> = ({ children }) => 
                                 onClick={smDown ? toggleDrawerOpen : undefined}
                             />
                             <ListItemLink
-                                icon='star'
+                                icon='logout'
                                 to='sair'
                                 label='Sair'
                                 onClick={smDown ? toggleDrawerOpen : undefined}

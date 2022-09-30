@@ -5,6 +5,7 @@ import { useDrawerContext } from '../shared/contexts';
 import { Dashboard } from '../pages';
 import { Despesas } from '../pages/despesas/Despesas';
 import { Lancamentos } from '../pages/lancamentos/Lancamentos';
+import { Usuarios } from '../pages/usuarios/usuarios';
 
 export const AppRoutes = () => {
     const { toggleDrawerOpen, setDrawerOptions } = useDrawerContext();
@@ -14,20 +15,20 @@ export const AppRoutes = () => {
             {
                 icon: 'home',
                 path: '/pagina-inicial',
-                label: 'pagina-inicial'
+                label: 'Home'
             },
             {
-                icon: 'star',
+                icon: 'listalt',
                 path: '/despesas',
                 label: 'Despesas'
             },
             {
-                icon: 'star',
+                icon: 'listalt',
                 path: '/receitas',
                 label: 'Receitas'
             },
             {
-                icon: 'star',
+                icon: 'viewlist',
                 path: '/lancamentos',
                 label: 'Lançamentos'
             }
@@ -42,6 +43,7 @@ export const AppRoutes = () => {
             <Route path='/lancamentos' element={<Lancamentos />} />
             <Route path='/configuracoes' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Configurações</Button>} />
             <Route path='/sair' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Sair</Button>} />
+            <Route path='/primeiroAcesso' element={<Usuarios />} />
 
             {<Route path='*' element={<Navigate to='pagina-inicial' />} />}
         </Routes>

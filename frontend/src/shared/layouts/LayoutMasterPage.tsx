@@ -30,7 +30,7 @@ export const LayoutMasterPage: React.FC<ILayoutMasterPageProps> = ({ children, t
             <Box>
                 Barra de Ferramentas
             </Box>
-            <Box>
+            <Box height="100%" display="flex" flexDirection="column"  bgcolor={'red'} >
                 {children}
             </Box>
         </Box>
