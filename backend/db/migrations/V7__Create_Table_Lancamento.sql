@@ -4,8 +4,8 @@ GO
 CREATE TABLE [dbo].[Lancamento](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[idUsuario] [int] NOT NULL,
-	[idDespesa] [int] NOT NULL,
-	[idReceita] [int] NOT NULL,
+	[idDespesa] [int] NULL,
+	[idReceita] [int] NULL,
 	[valor] [money] NULL,
 	[data] [smalldatetime] NULL,
 	[descricao] [varchar](100) NULL,
