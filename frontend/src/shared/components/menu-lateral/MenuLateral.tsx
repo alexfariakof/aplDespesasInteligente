@@ -1,12 +1,13 @@
 import React from 'react';
 import { Avatar, Divider, Drawer, List, ListItemButton, ListItemIcon, ListItemText, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
-import Icon from '@mui/material/Icon';
 import HomeIcon from '@mui/icons-material/Home';
+import StarIcon from '@mui/icons-material/Star';
+import SettingsIcon from '@mui/icons-material/Settings';
+
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDrawerContext } from '../../contexts';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
-import { Label } from '@mui/icons-material';
 
 interface IListItemLinkProps {
     to: string;
@@ -29,9 +30,16 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
     };
 
     return (
-        <ListItemButton onClick={handleClick}>
+        <ListItemButton selected={!!match} onClick={handleClick}>
             <ListItemIcon>
-                <Icon >{icon}</Icon>
+                {(() => {
+                    switch (icon) {
+                        case "home": return <HomeIcon />;
+                        case "star": return <StarIcon />;
+                        case "settings": return <SettingsIcon />;
+                        default: return undefined;
+                    }
+                })()};
             </ListItemIcon>
             <ListItemText primary={label} />
         </ListItemButton>
@@ -80,7 +88,7 @@ export const MenuLateral: React.FC<React.PropsWithChildren> = ({ children }) => 
 
                             <Divider />
                             <ListItemLink
-                                icon='star'
+                                icon='settings'
                                 to='configuracoes'
                                 label='Configurações'
                                 onClick={smDown ? toggleDrawerOpen : undefined}

@@ -2,6 +2,9 @@ import { useEffect } from 'react'
 import { Button } from '@mui/material';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDrawerContext } from '../shared/contexts';
+import { Dashboard } from '../pages';
+import { Despesas } from '../pages/despesas/Despesas';
+import { Lancamentos } from '../pages/lancamentos/Lancamentos';
 
 export const AppRoutes = () => {
     const { toggleDrawerOpen, setDrawerOptions } = useDrawerContext();
@@ -28,18 +31,15 @@ export const AppRoutes = () => {
                 path: '/lancamentos',
                 label: 'Lançamentos'
             }
-
-
-
         ]);
-    }, []);
+    }, [setDrawerOptions]);
 
     return (
         <Routes>
-            <Route path='/pagina-inicial' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Home</Button>} />
-            <Route path='/despesas' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Despesas</Button>} />
+            <Route path='/pagina-inicial' element={<Dashboard />} />
+            <Route path='/despesas' element={<Despesas />} />
             <Route path='/receitas' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Receitas</Button>} />
-            <Route path='/lancamentos' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Lançamentos</Button>} />
+            <Route path='/lancamentos' element={<Lancamentos />} />
             <Route path='/configuracoes' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Configurações</Button>} />
             <Route path='/sair' element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen} >Sair</Button>} />
 
